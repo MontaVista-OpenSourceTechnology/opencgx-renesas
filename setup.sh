@@ -60,9 +60,9 @@ CONFIG@OPTEEMACHINE=rcar \
 CONFIG@OPTEEOUTPUTMACHINE=rcar \
 "
 TOPDIR=$(dirname $THIS_SCRIPT)
-buildtar=""
 URL=""
-
+BUILD_TOOLS_LOCATION=http://downloads.yoctoproject.org/releases/yocto/yocto-3.1/buildtools/
+buildtar=x86_64-buildtools-extended-nativesdk-standalone-3.1.sh
 for config in $REPO_CONFIG; do
     VAR=$(echo $config | cut -d @ -f 1)
     VAL=$(echo $config | cut -d @ -f 2)
